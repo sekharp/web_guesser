@@ -5,11 +5,6 @@
       <input type='text' name='guess' />
       <input type='submit' value='Guess!' />
     </form>
-    <%= too_high_message if params['guess'].to_i > number + 5 %>
-    <%= high_message if params['guess'].to_i > number %>
-    <%= low_message if params['guess'].to_i < number %>
-    <%= too_low_message if params['guess'].to_i < number - 5 %>
-    <%= correct if params['guess'].to_i == number %>
-    <%= "The SECRET NUMBER is #{number}" if params['guess'].to_i == number %>
+    <%= message %>
   </body>
 </html>
